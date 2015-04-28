@@ -1,4 +1,6 @@
-<h1>Listing users</h1>
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+<%= will_paginate %>
 
 <table>
   <thead>
@@ -12,7 +14,8 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
+        <td><%= link_to user.name, user %></td>
+        <td><%= gravatar_for user, size:50 %></td>
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
@@ -23,5 +26,5 @@
 </table>
 
 <br>
-
+<%= will_paginate %>
 <%= link_to 'New User', new_user_path %>
