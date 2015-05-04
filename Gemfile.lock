@@ -51,6 +51,8 @@ GEM
     execjs (2.4.0)
     faker (1.4.2)
       i18n (~> 0.5)
+    figaro (1.0.0)
+      thor (~> 0.14)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.12)
@@ -144,6 +146,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.0.0)
   faker (= 1.4.2)
+  figaro
   jbuilder (~> 2.0)
   jquery-rails
   pg
