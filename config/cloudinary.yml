@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hzaawmytc
+  api_key: '527577229213518'
+  api_secret: P-bLmQHvL2Nnjkvf-EMoD_oPets
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hzaawmytc
+  api_key: '527577229213518'
+  api_secret: P-bLmQHvL2Nnjkvf-EMoD_oPets
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hzaawmytc
+  api_key: '527577229213518'
+  api_secret: P-bLmQHvL2Nnjkvf-EMoD_oPets
+  enhance_image_tag: true
+  static_image_support: false

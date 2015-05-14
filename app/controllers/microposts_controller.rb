@@ -11,6 +11,7 @@ class MicropostsController < ApplicationController
   # GET /microposts/1
   # GET /microposts/1.json
   def show
+    set_micropost
   end
 
   # GET /microposts/new
@@ -20,6 +21,7 @@ class MicropostsController < ApplicationController
 
   # GET /microposts/1/edit
   def edit
+    set_micropost
   end
 
   # POST /microposts
@@ -34,7 +36,6 @@ class MicropostsController < ApplicationController
         @feed_items = []
         render 'static_pages/home'
       end
-    end
   end
 
   # PATCH/PUT /microposts/1
@@ -57,7 +58,6 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = "Micropost deleted"
     redirect_to request.referrer || root_url 
-    end
   end
 
   private
@@ -75,4 +75,4 @@ class MicropostsController < ApplicationController
      @micropost = current_user.microposts.find_by(id: params[:id])
      redirect_to root_url if @micropost.nil?
    end 
-end
+end 
